@@ -1,6 +1,8 @@
 # Angular Seed Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+Angualar 7.2.0
+NG Ant Design UI Component
 
 ## Development server
 
