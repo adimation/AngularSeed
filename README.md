@@ -2,9 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
-Angular 7.2.0
-NG Ant Design 7.2.0
-RXJS 6.3.3
+Angular 7.2.0,
+
+NG Ant Design 7.2.0,
+
+RXJS 6.3.3,
+
 Typescript 3.2.2
 
 ## Development server
