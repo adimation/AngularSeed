@@ -1,0 +1,35 @@
+<div class="dashboard">
+    <nz-layout class="dashboard-layout">
+        <nz-content class="dashboard-content">
+            <h1>Welcome John Doe!</h1>
+
+            <div nz-row [nzGutter]="24">
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <nz-card>
+                        <nz-statistic [nzPrefix]="'$'" [nzValue]="101.25 | number" [nzTitle]="'Total Commission'"></nz-statistic>
+                    </nz-card>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <nz-card>
+                        <nz-statistic [nzValue]="5234 | number" [nzTitle]="'Total Redirects'"></nz-statistic>
+                    </nz-card>
+                </div>
+            </div>
+
+            <br>
+
+            <div nz-row [nzGutter]="24">
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <nz-card>
+                        <nz-statistic [nzPrefix]="'$'" [nzValue]="152 | number" [nzTitle]="'Total Sales'"></nz-statistic>
+                    </nz-card>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                    <nz-card>
+                        <nz-statistic [nzSuffix]="'%'" [nzValue]="3 | number" [nzTitle]="'Conversion Rate'"></nz-statistic>
+                    </nz-card>
+                </div>
+            </div>
+        </nz-content>
+    </nz-layout>
+</div>

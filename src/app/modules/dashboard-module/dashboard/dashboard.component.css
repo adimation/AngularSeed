@@ -1,0 +1,30 @@
+.dashboard {}
+
+nz-form-label.empty-label {
+    visibility: hidden;
+}
+
+
+/* .dashboard-form-button {
+    width: 40%;
+    margin: 0 2%;
+    padding: 0 4%;
+} */
+
+.dashboard nz-month-picker {
+    padding: 5px 0 0 0;
+}
+
+.border-bottom {
+    border-bottom: solid 1px #E8E8E8;
+    padding: 10px;
+}
+
+div.table {
+    padding: 10px;
+}
+
+.ant-form-inline .ant-form-item,
+button {
+    margin-right: 8px;
+}

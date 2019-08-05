@@ -1,0 +1,51 @@
+<nz-layout>
+    <nz-header class="am-header">
+        <img src="/assets/images/logo.png" />
+        <!--
+        <app-notification></app-notification>
+        <span class="version">{{version}}</span>
+        -->
+        <nz-dropdown class="user-menu" [nzTrigger]="'click'">
+            <a nz-dropdown> John Doe <i nz-icon type="down"></i> </a>
+            <ul nz-menu>
+                <li nz-menu-item><a (click)="logout()"><span class="nav-text">Logout</span></a></li>
+            </ul>
+        </nz-dropdown>
+    </nz-header>
+
+    <nz-layout class="am-layout">
+        <nz-sider [nzWidth]="width" class="am-sider">
+            <!--
+            <div class="logo">
+                <img src="./assets/images/logo.png" />
+            </div>
+            -->
+            <ul nz-menu [nzMode]="'inline'">
+                <li nz-menu-item routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{exact: false}">
+                    <a routerLink="/dashboard"><span class="nav-text">Dashboard</span></a>
+                </li>
+                <li nz-menu-item routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{exact: false}">
+                    <a routerLink="/products"><span class="nav-text">Products</span></a>
+                </li>
+                <li nz-menu-item routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{exact: false}">
+                    <a routerLink="/audience-partners"><span class="nav-text">Audience Partners</span></a>
+                </li>
+                <li nz-menu-item routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{exact: false}">
+                    <a routerLink="/transactions"><span class="nav-text">Transactions</span></a>
+                </li>
+                <!--
+                <li appHasPermission [hasPermission]="viewProductsListPerm" [hideAttr]="true" [userPermissions]="userService.currentUserPermissions" nz-menu-item routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{exact: true}">
+                    <a routerLink="/activate-providers"><span class="nav-text">Activate Providers</span></a>
+                </li>
+                <li nz-menu-item>
+                    <a (click)="logout()"><span class="nav-text">Logout</span></a>
+                </li>
+                -->
+            </ul>
+        </nz-sider>
+
+        <nz-content class="am-content">
+            <router-outlet></router-outlet>
+        </nz-content>
+    </nz-layout>
+</nz-layout>

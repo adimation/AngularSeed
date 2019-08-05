@@ -1,0 +1,84 @@
+<div class="product">
+    <nz-layout class="product-layout">
+        <nz-content class="product-content">
+            <div nz-row>
+                <div nz-col [nzSpan]="4">
+                    <h2>Products</h2>
+                </div>
+                <div nz-col [nzSpan]="4" nzOffset="16">
+                    <button class="float-right" nz-button [nzType]="'primary'">Re-import products</button>
+                </div>
+            </div>
+
+            <div nz-row>
+                <div nz-col nzSpan="6" nzOffset="8" class="text-align-center">
+                    <nz-radio-group [(ngModel)]="product" [nzButtonStyle]="'solid'">
+                        <label nz-radio-button nzValue="A">Ali Express</label>
+                        <label nz-radio-button nzValue="B">Lazada</label>
+                    </nz-radio-group>
+                </div>
+            </div>
+
+            <br>
+
+            <div nz-row>
+                <div nz-col nzSpan="24">
+                    <div class="table">
+                        <nz-table #productTable
+                        nzBordered nzShowSizeChanger
+                        [nzFrontPagination]="false"
+                        [nzData]="products"
+                        [nzSize]="'small'"
+                        [nzLoading]="loading"
+                        [nzTotal]="total"
+                        [(nzPageIndex)]="pageIndex"
+                        [(nzPageSize)]="pageSize"
+                        (nzPageIndexChange)="submitForm()"
+                        (nzPageSizeChange)="submitForm(true)">
+                            <thead>
+                                <tr>
+                                    <th nzWidth="20%">Image</th>
+                                    <th nzWidth="30%">Product Name</th>
+                                    <th nzWidth="10%">Price</th>
+                                    <th nzWidth="30%">URL</th>
+                                    <th nzWidth="10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of productTable.data">
+                                    <td>
+                                        {{data.Image}}
+                                    </td>
+                                    <td>
+                                        {{data.ProductName}}
+                                    </td>
+                                    <td>
+                                        {{data.Price | number:'.2-2'}}
+                                    </td>
+                                    <td>
+                                        {{data.URL}}
+                                    </td>
+                                    <td>
+                                        <i nz-icon>
+                                            <svg viewBox="0 0 512 512">
+                                                <g>
+                                                    <g>
+                                                        <g>
+                                                            <circle cx="256" cy="256" r="64"/>
+                                                            <circle cx="256" cy="448" r="64"/>
+                                                            <circle cx="256" cy="64" r="64"/>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </nz-table>
+                    </div>
+                </div>
+            </div>
+        </nz-content>
+    </nz-layout>
+</div>

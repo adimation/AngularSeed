@@ -1,0 +1,14 @@
+div.spinner {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+    opacity: .4;
+}
+
+div.spinner nz-spin {
+    position: relative;
+    left: 47%;
+    top: 47%;
+}

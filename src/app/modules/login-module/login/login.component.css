@@ -1,0 +1,71 @@
+.login-layout {
+    background-color: transparent;
+}
+
+.login-content {
+    width: 25%;
+    margin: 50px auto;
+    background: transparent;
+}
+
+.login-form {
+    /* padding: 3% 5%;
+    border: 1px solid #DADADA; */
+    /* height: 100%; */
+    background-color: white;
+    position: relative;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.login-form-forgot {
+    float: left;
+}
+
+.login-form-button {
+    width: 100%;
+    font-weight: bold;
+}
+
+:host {
+    text-align: center;
+}
+
+nz-layout {
+    background-color: #f4f6f7;
+    min-height: 400px;
+}
+
+nz-layout:last-child {
+    margin: 0;
+}
+
+nz-form-label {
+    float: left;
+    font-weight: 500;
+}
+
+.google-login-form-button {
+    background-color: #DB4437;
+    border-color: #DB4437;
+    color: white;
+}
+
+.twitter-login-form-button {
+    background-color: #1da1f2;
+    border-color: #1da1f2;
+    color: white;
+}
+
+.facebook-login-form-button {
+    background-color: #3b5998;
+    border-color: #3b5998;
+    color: white;
+}
+
+.microsoft-login-form-button {
+    background-color: #7FBA00;
+    border-color: #7FBA00;
+    color: white;
+}

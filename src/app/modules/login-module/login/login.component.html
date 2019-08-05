@@ -1,0 +1,47 @@
+<nz-layout class="login-layout">
+    <app-header></app-header>
+
+    <nz-layout class="login-layout">
+        <nz-content class="login-content">
+            <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                    <h1>Sign In</h1>
+                </nz-form-item> 
+                <nz-form-control class="has-error">
+                    <nz-form-extra class="error" *ngIf="formSubmitError">{{formSubmitError}}</nz-form-extra>
+                </nz-form-control>
+                <nz-form-item>
+                    <nz-form-label nzRequired class="left">Email Address</nz-form-label>
+                    <nz-form-control>
+                        <nz-input-group [nzPrefix]="prefixUser">
+                            <input type="text" nz-input formControlName="userName" placeholder="Email Address" />
+                        </nz-input-group>
+                        <nz-form-explain *ngIf="validateForm.get('userName')?.dirty && validateForm.get('userName')?.errors">Please input your username.</nz-form-explain>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-label nzRequired>Password</nz-form-label>
+                    <nz-form-control>
+                        <nz-input-group [nzPrefix]="prefixLock">
+                            <input type="password" nz-input formControlName="password" placeholder="Password" />
+                        </nz-input-group>
+                        <nz-form-explain *ngIf="validateForm.get('password')?.dirty && validateForm.get('password')?.errors">Please input your Password.</nz-form-explain>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control>
+                        <button nz-button class="login-form-button" [nzLoading]="isLoading" nzType="primary">Sign In</button>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <a routerLink="/forgot-password">Forgot Password?</a>
+                </nz-form-item>
+            </form>
+
+            <ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
+            <ng-template #prefixLock><i nz-icon type="lock"></i></ng-template>
+        </nz-content>
+    </nz-layout>
+
+    <app-footer></app-footer>
+</nz-layout>
